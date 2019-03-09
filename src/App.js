@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import LazyLoad from 'react-lazyload';
 import Header from './components/Header';
 import Page from './components/Page';
 import Footer from './components/Footer';

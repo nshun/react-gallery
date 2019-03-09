@@ -45,14 +45,14 @@
 }
 
 .list-image{
-  height: 50vmin;
-  width: 50vmin;
+  height: 25vmin;
+  width: 25vmin;
   object-fit: cover; 
   background-color: whitesmoke;
 }
 
 .detail-image{
-  max-width:100%;
+  width: 100vmin;
 }
 
 @keyframes App-logo-spin {

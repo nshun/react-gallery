@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazyload';
 import Image from './Image';
 import ImageDetail from './ImageDetail';
 
@@ -16,7 +17,7 @@ export default class List extends Component {
   }
 
   listImagesApi() {
-    fetch('https://wfc-2019.firebaseapp.com/images?limit=20&offset=', {
+    fetch('https://wfc-2019.firebaseapp.com/images?limit=50&offset=', {
       method: 'GET',
     }).then(res => {
       return res.json();
@@ -57,9 +58,15 @@ export default class List extends Component {
       const listImages = images.map(
         (image, i) => {
           if (image.id === detailImageId) {
-            return <ImageDetail key={i} detail={image} click={this.toggleImage} />
+            return (
+              <ImageDetail key={i + "_d"} detail={image} click={this.toggleImage} />
+            );
           } else {
-            return <Image key={i} detail={image} click={this.toggleImage} />
+            return (
+              <LazyLoad width="25vmin" height="25vmin" once>
+                <Image key={i} detail={image} click={this.toggleImage} />
+              </LazyLoad>
+            )
           }
         }
       );
