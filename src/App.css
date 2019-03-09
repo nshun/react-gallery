@@ -12,7 +12,7 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 5vmin;
+  height: 5vh;
   pointer-events: none;
 }
 
@@ -45,14 +45,14 @@
 }
 
 .list-image{
-  height: 25vmin;
-  width: 25vmin;
+  height: 24vw;
+  width: 24vw;
   object-fit: cover; 
   background-color: whitesmoke;
 }
 
 .detail-image{
-  width: 100vmin;
+  width: 96vw;
 }
 
 @keyframes App-logo-spin {
