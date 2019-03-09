@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import List from './List';
+import React, { Component } from "react";
+import List from "./List";
 
 export default class Page extends Component {
   render() {
@@ -7,6 +7,6 @@ export default class Page extends Component {
       <div className="App-body">
         <List />
       </div>
-    )
+    );
   }
 }

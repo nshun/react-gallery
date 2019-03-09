@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import brokenImage from '../broken-link.svg';
+import React, { Component } from "react";
+import brokenImage from "../broken-link.svg";
 
 export default class Image extends Component {
   onClick() {
@@ -7,11 +7,7 @@ export default class Image extends Component {
   }
 
   render() {
-    const {
-      url,
-      description,
-      title
-    } = this.props.detail;
+    const { url, description, title } = this.props.detail;
     return (
       <img
         className="list-image"
@@ -19,6 +15,7 @@ export default class Image extends Component {
         title={title || ""}
         src={url || brokenImage}
         onClick={() => this.onClick()}
-      />);
+      />
+    );
   }
 }
