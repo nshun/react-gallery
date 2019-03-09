@@ -51,6 +51,7 @@
 }
 
 .list-image {
+  margin: 1px;
   height: 24vw;
   width: 24vw;
   object-fit: cover;
