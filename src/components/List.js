@@ -5,9 +5,11 @@ import ImageDetail from './ImageDetail';
 export default class List extends Component {
   constructor(props) {
     super(props);
+
+    const urlParams = new URLSearchParams(window.location.search);
     this.state = {
       images: [],
-      clickedImageId: ""
+      clickedImageId: urlParams.get('id') || ""
     };
     this.listImagesApi = this.listImagesApi.bind(this);
     this.toggleImage = this.toggleImage.bind(this);
@@ -30,8 +32,10 @@ export default class List extends Component {
 
   toggleImage(id) {
     if (this.state.clickedImageId === id) {
+      window.history.pushState(null, null, "/");
       this.setState({ clickedImageId: "" });
     } else {
+      window.history.pushState(null, null, `?id=${id}`);
       this.setState({ clickedImageId: id });
     }
   }
