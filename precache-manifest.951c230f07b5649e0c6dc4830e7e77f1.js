@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/reacy-gallery/static/js/runtime~main.83b7740b.js"
   },
   {
-    "revision": "911b954c74028b190d80",
-    "url": "/reacy-gallery/static/js/main.c61a8f4c.chunk.js"
+    "revision": "c66d3a0c9af7db2b2adf",
+    "url": "/reacy-gallery/static/js/main.09ccf829.chunk.js"
   },
   {
-    "revision": "f142332cf4d164b53e8f",
-    "url": "/reacy-gallery/static/js/2.db67708e.chunk.js"
+    "revision": "213a27f4b14254720c5d",
+    "url": "/reacy-gallery/static/js/2.8a8dbcff.chunk.js"
   },
   {
-    "revision": "911b954c74028b190d80",
-    "url": "/reacy-gallery/static/css/main.f5d04510.chunk.css"
+    "revision": "c66d3a0c9af7db2b2adf",
+    "url": "/reacy-gallery/static/css/main.b145eb1b.chunk.css"
   },
   {
-    "revision": "ee51ba164e39ab6758bae9f3a66ce35c",
+    "revision": "dca3f3bad2e7d460a8c86bd16432f913",
     "url": "/reacy-gallery/index.html"
   }
 ];
