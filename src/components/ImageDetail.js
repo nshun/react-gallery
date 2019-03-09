@@ -14,7 +14,7 @@ export default class Image extends Component {
     } = this.props.detail;
     return (
       <img
-        className="list-image"
+        className="detail-image"
         alt={description || ""}
         title={title || ""}
         src={url || brokenImage}

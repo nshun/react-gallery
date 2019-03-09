@@ -33,7 +33,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
 }
 
 .App-footer {
@@ -49,6 +49,10 @@
   width: 50vmin;
   object-fit: cover; 
   background-color: whitesmoke;
+}
+
+.detail-image{
+  max-width:100%;
 }
 
 @keyframes App-logo-spin {

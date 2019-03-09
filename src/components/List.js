@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import Image from './Image';
+import ImageDetail from './ImageDetail';
 
 export default class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
       images: [],
-      clicked: ""
+      clickedImageId: ""
     };
     this.listImagesApi = this.listImagesApi.bind(this);
+    this.toggleImage = this.toggleImage.bind(this);
   }
 
   listImagesApi() {
@@ -26,6 +28,14 @@ export default class List extends Component {
     });
   }
 
+  toggleImage(id) {
+    if (this.state.clickedImageId === id) {
+      this.setState({ clickedImageId: "" });
+    } else {
+      this.setState({ clickedImageId: id });
+    }
+  }
+
   componentWillMount() {
     this.listImagesApi();
   }
@@ -39,8 +49,15 @@ export default class List extends Component {
     if (0 === images.length) {
       return <h1> Loading... </h1>
     } else {
+      const detailImageId = this.state.clickedImageId;
       const listImages = images.map(
-        (image, i) => <Image key={i} detail={image} />
+        (image, i) => {
+          if (image.id === detailImageId) {
+            return <ImageDetail key={i} detail={image} click={this.toggleImage} />
+          } else {
+            return <Image key={i} detail={image} click={this.toggleImage} />
+          }
+        }
       );
       return listImages;
     }
