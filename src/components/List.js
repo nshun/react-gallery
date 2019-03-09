@@ -83,7 +83,7 @@ export default class List extends Component {
     var bodyRect = document.body.getBoundingClientRect(),
       elemRect = document.getElementById("footer").getBoundingClientRect(),
       offset = elemRect.top - bodyRect.top;
-    if (offset / 2 < window.scrollY + window.innerHeight) {
+    if (offset < window.scrollY + 2 * window.innerHeight) {
       this.listImagesApi();
     }
   };
@@ -106,7 +106,7 @@ export default class List extends Component {
         } else {
           return (
             <LazyLoad width="25vmin" height="25vmin" once>
-              <Image key={i} detail={image} click={this.toggleImage} />
+              <Image key={i} detail={image} click={this.toggleImage} />{" "}
             </LazyLoad>
           );
         }
