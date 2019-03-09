@@ -1,5 +1,5 @@
 {
-  "main.css": "/react-gallery/static/css/main.529279af.chunk.css",
+  "main.css": "/react-gallery/static/css/main.b848c3a0.chunk.css",
   "main.js": "/react-gallery/static/js/main.d740a17c.chunk.js",
   "main.js.map": "/react-gallery/static/js/main.d740a17c.chunk.js.map",
   "runtime~main.js": "/react-gallery/static/js/runtime~main.97aa4c42.js",
@@ -7,9 +7,9 @@
   "static/js/2.2d5ba05c.chunk.js": "/react-gallery/static/js/2.2d5ba05c.chunk.js",
   "static/js/2.2d5ba05c.chunk.js.map": "/react-gallery/static/js/2.2d5ba05c.chunk.js.map",
   "index.html": "/react-gallery/index.html",
-  "precache-manifest.bb342db827a781d99ff831894d458510.js": "/react-gallery/precache-manifest.bb342db827a781d99ff831894d458510.js",
+  "precache-manifest.a35d7718e13c50fac3fa4ebedfc83701.js": "/react-gallery/precache-manifest.a35d7718e13c50fac3fa4ebedfc83701.js",
   "service-worker.js": "/react-gallery/service-worker.js",
-  "static/css/main.529279af.chunk.css.map": "/react-gallery/static/css/main.529279af.chunk.css.map",
+  "static/css/main.b848c3a0.chunk.css.map": "/react-gallery/static/css/main.b848c3a0.chunk.css.map",
   "static/media/broken-link.svg": "/react-gallery/static/media/broken-link.dafb506b.svg",
   "static/media/logo.svg": "/react-gallery/static/media/logo.5d5d9eef.svg"
 }
