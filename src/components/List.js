@@ -3,6 +3,8 @@ import LazyLoad from 'react-lazyload';
 import Image from './Image';
 import ImageDetail from './ImageDetail';
 
+let loading = false;
+
 export default class List extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +21,8 @@ export default class List extends Component {
   }
 
   listImagesApi() {
+    if (loading) return;
+    loading = true;
     fetch(`https://wfc-2019.firebaseapp.com/images?limit=${this.state.limit}&offset=${this.state.offset}`, {
       method: 'GET',
     }).then(res => {
@@ -30,6 +34,7 @@ export default class List extends Component {
           offset: this.state.offset + this.state.limit,
           images: this.state.images.concat(images)
         });
+        loading = false;
       } else {
         setInterval(this.listImagesApi, 1000);
       }
@@ -58,9 +63,9 @@ export default class List extends Component {
     var bodyRect = document.body.getBoundingClientRect(),
       elemRect = document.getElementById("footer").getBoundingClientRect(),
       offset = elemRect.top - bodyRect.top;
-
-    console.log('Element is ' + offset + ' vertical pixels from <body>');
-    console.log('Scroll is ' + window.scrollY + ' vertical pixels');
+    if (offset / 2 < window.scrollY + window.innerHeight) {
+      this.listImagesApi();
+    }
   }
 
   render() {
