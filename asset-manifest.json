@@ -1,15 +1,15 @@
 {
-  "main.css": "/reacy-gallery/static/css/main.529279af.chunk.css",
-  "main.js": "/reacy-gallery/static/js/main.c54fc0c0.chunk.js",
-  "main.js.map": "/reacy-gallery/static/js/main.c54fc0c0.chunk.js.map",
-  "runtime~main.js": "/reacy-gallery/static/js/runtime~main.83b7740b.js",
-  "runtime~main.js.map": "/reacy-gallery/static/js/runtime~main.83b7740b.js.map",
-  "static/js/2.2d5ba05c.chunk.js": "/reacy-gallery/static/js/2.2d5ba05c.chunk.js",
-  "static/js/2.2d5ba05c.chunk.js.map": "/reacy-gallery/static/js/2.2d5ba05c.chunk.js.map",
-  "index.html": "/reacy-gallery/index.html",
-  "precache-manifest.99c8289070fd69091f636b79804a4ec8.js": "/reacy-gallery/precache-manifest.99c8289070fd69091f636b79804a4ec8.js",
-  "service-worker.js": "/reacy-gallery/service-worker.js",
-  "static/css/main.529279af.chunk.css.map": "/reacy-gallery/static/css/main.529279af.chunk.css.map",
-  "static/media/broken-link.svg": "/reacy-gallery/static/media/broken-link.dafb506b.svg",
-  "static/media/logo.svg": "/reacy-gallery/static/media/logo.5d5d9eef.svg"
+  "main.css": "/react-gallery/static/css/main.529279af.chunk.css",
+  "main.js": "/react-gallery/static/js/main.d740a17c.chunk.js",
+  "main.js.map": "/react-gallery/static/js/main.d740a17c.chunk.js.map",
+  "runtime~main.js": "/react-gallery/static/js/runtime~main.97aa4c42.js",
+  "runtime~main.js.map": "/react-gallery/static/js/runtime~main.97aa4c42.js.map",
+  "static/js/2.2d5ba05c.chunk.js": "/react-gallery/static/js/2.2d5ba05c.chunk.js",
+  "static/js/2.2d5ba05c.chunk.js.map": "/react-gallery/static/js/2.2d5ba05c.chunk.js.map",
+  "index.html": "/react-gallery/index.html",
+  "precache-manifest.bb342db827a781d99ff831894d458510.js": "/react-gallery/precache-manifest.bb342db827a781d99ff831894d458510.js",
+  "service-worker.js": "/react-gallery/service-worker.js",
+  "static/css/main.529279af.chunk.css.map": "/react-gallery/static/css/main.529279af.chunk.css.map",
+  "static/media/broken-link.svg": "/react-gallery/static/media/broken-link.dafb506b.svg",
+  "static/media/logo.svg": "/react-gallery/static/media/logo.5d5d9eef.svg"
 }
