@@ -9,6 +9,8 @@ export default class List extends Component {
 
     const urlParams = new URLSearchParams(window.location.search);
     this.state = {
+      limit: 20,
+      offset: 0,
       images: [],
       clickedImageId: urlParams.get('id') || ""
     };
@@ -17,14 +19,17 @@ export default class List extends Component {
   }
 
   listImagesApi() {
-    fetch('https://wfc-2019.firebaseapp.com/images?limit=50&offset=', {
+    fetch(`https://wfc-2019.firebaseapp.com/images?limit=${this.state.limit}&offset=${this.state.offset}`, {
       method: 'GET',
     }).then(res => {
       return res.json();
     }).then(json => {
       if (json.ok) {
         const images = json.data.images;
-        this.setState({ images: images });
+        this.setState({
+          offset: this.state.offset + this.state.limit,
+          images: this.state.images.concat(images)
+        });
       } else {
         setInterval(this.listImagesApi, 1000);
       }
@@ -45,8 +50,17 @@ export default class List extends Component {
     this.listImagesApi();
   }
 
-  handleClickedImage() {
-    this.setState("clicked");
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = (evt) => {
+    var bodyRect = document.body.getBoundingClientRect(),
+      elemRect = document.getElementById("footer").getBoundingClientRect(),
+      offset = elemRect.top - bodyRect.top;
+
+    console.log('Element is ' + offset + ' vertical pixels from <body>');
+    console.log('Scroll is ' + window.scrollY + ' vertical pixels');
   }
 
   render() {
