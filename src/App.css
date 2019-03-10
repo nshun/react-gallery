@@ -33,6 +33,11 @@
   color: white;
 }
 
+.App-Name {
+  text-decoration: none;
+  color: white;
+}
+
 .App-body {
   margin: calc(5vh + 1px) 0 0 0;
   padding: 0;

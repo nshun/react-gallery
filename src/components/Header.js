@@ -6,7 +6,9 @@ export default class Header extends Component {
     return (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <span>React Gallery App</span>
+        <a className="App-Name" href="#top">
+          React Gallery App
+        </a>
       </header>
     );
   }
