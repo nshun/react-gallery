@@ -59,6 +59,12 @@
   background-color: whitesmoke;
 }
 
+.list-image:focus {
+  opacity: 0.5;
+  border: solid 0.2vw transparent;
+  transition: all 0.5s;
+}
+
 .hidden {
   visibility: hidden;
 }

@@ -10,7 +10,7 @@ export default class List extends Component {
 
     const urlParams = new URLSearchParams(window.location.search);
     this.state = {
-      limit: 24,
+      limit: 36,
       offset: 0,
       images: [],
       clickedImageId: urlParams.get("id") || "",

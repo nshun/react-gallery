@@ -11,6 +11,7 @@ export default class Image extends Component {
     return (
       <img
         className="list-image"
+        tabIndex="0"
         alt={detail.description || ""}
         title={detail.title || ""}
         src={detail.url || brokenImage}
