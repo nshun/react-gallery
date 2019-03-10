@@ -1,15 +1,17 @@
 {
-  "name": "my-app",
+  "name": "kasane",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://nshun.net/react-gallery/",
   "dependencies": {
     "react": "^16.8.4",
+    "react-app-polyfill": "^0.2.2",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.5.0",
     "react-scripts": "2.1.8",
-    "react-share": "^2.4.0"
+    "react-share": "^2.4.0",
+    "url-search-params-polyfill": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
