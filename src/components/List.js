@@ -10,7 +10,7 @@ export default class List extends Component {
 
     const urlParams = new URLSearchParams(window.location.search);
     this.state = {
-      limit: 20,
+      limit: 24,
       offset: 0,
       images: [],
       clickedImageId: urlParams.get("id") || "",
@@ -59,7 +59,7 @@ export default class List extends Component {
     var bodyRect = document.body.getBoundingClientRect(),
       elemRect = document.getElementById("footer").getBoundingClientRect(),
       offset = elemRect.top - bodyRect.top;
-    if (offset < window.scrollY + 2 * window.innerHeight) {
+    if (offset < window.scrollY + 3 * window.innerHeight) {
       this.listImagesApi();
     }
   };
@@ -71,7 +71,7 @@ export default class List extends Component {
     } else {
       const listImages = images.map((image, i) => {
         return (
-          <LazyLoad height="25vmin" once offset={100}>
+          <LazyLoad height="25vmin" once offset={500}>
             <Image key={i} detail={image} click={this.toggleImage} />{" "}
           </LazyLoad>
         );

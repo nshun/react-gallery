@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { TwitterShareButton, TwitterIcon } from "react-share";
 import brokenImage from "../broken-link.svg";
 
 export default class Image extends Component {
@@ -14,7 +15,7 @@ export default class Image extends Component {
       return (
         <div className="popup">
           <div className="popup-header">
-            <h1>{detail.title}</h1>
+            <h2>{detail.description}</h2>
           </div>
           <div className="popup-inner">
             <img
@@ -30,6 +31,14 @@ export default class Image extends Component {
                 e.target.src = brokenImage;
               }}
             />
+          </div>
+          <div className="popup-footer">
+            <TwitterShareButton
+              url={window.location.href}
+              title={`${detail.description} "${detail.title}"`}
+            >
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
           </div>
         </div>
       );
