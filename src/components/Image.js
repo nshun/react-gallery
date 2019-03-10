@@ -7,13 +7,15 @@ export default class Image extends Component {
   }
 
   render() {
-    const { url, description, title } = this.props.detail;
+    const detail = this.props.detail;
     return (
       <img
         className="list-image"
-        alt={description || ""}
-        title={title || ""}
-        src={url || brokenImage}
+        alt={detail.description || ""}
+        title={detail.title || ""}
+        src={detail.url || brokenImage}
+        width={detail.width || ""}
+        height={detail.height || ""}
         onClick={() => this.onClick()}
         onError={e => {
           e.target.onerror = "";
