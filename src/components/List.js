@@ -44,6 +44,9 @@ export default class List extends Component {
         } else {
           setInterval(this.listImagesApi, 1000);
         }
+      })
+      .catch(e => {
+        setInterval(this.listImagesApi, 1000);
       });
   }
 
@@ -69,10 +72,16 @@ export default class List extends Component {
     if (0 === images.length) {
       return <h1> Loading... </h1>;
     } else {
-      const listImages = images.map((image, i) => {
+      const listImages = images.map(image => {
         return (
-          <LazyLoad height="25vmin" once offset={500}>
-            <Image key={i} detail={image} click={this.toggleImage} />{" "}
+          <LazyLoad
+            key={image.url}
+            height="25vw"
+            width="25vw"
+            once
+            offset={500}
+          >
+            <Image detail={image} click={this.toggleImage} />{" "}
           </LazyLoad>
         );
       });
