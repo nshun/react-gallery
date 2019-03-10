@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import LazyLoad from "react-lazyload";
 import Image from "./Image";
-import ImageDetail from "./ImageDetail";
 
 let loading = false;
 
@@ -17,7 +16,7 @@ export default class List extends Component {
       clickedImageId: urlParams.get("id") || "",
     };
     this.listImagesApi = this.listImagesApi.bind(this);
-    this.toggleImage = this.toggleImage.bind(this);
+    this.toggleImage = this.props.toggleImage.bind(this);
   }
 
   listImagesApi() {
@@ -48,29 +47,6 @@ export default class List extends Component {
       });
   }
 
-  toggleImage(id) {
-    if (window.history.pushState) {
-      let newurl =
-        window.location.protocol +
-        "//" +
-        window.location.host +
-        window.location.pathname;
-      if (this.state.clickedImageId !== id) {
-        newurl += `?id=${id}`;
-      }
-      window.history.pushState(
-        {
-          path: newurl,
-        },
-        "",
-        newurl
-      );
-    }
-    this.setState({
-      clickedImageId: this.state.clickedImageId === id ? "" : id,
-    });
-  }
-
   componentWillMount() {
     this.listImagesApi();
   }
@@ -93,23 +69,12 @@ export default class List extends Component {
     if (0 === images.length) {
       return <h1> Loading... </h1>;
     } else {
-      const detailImageId = this.state.clickedImageId;
       const listImages = images.map((image, i) => {
-        if (image.id === detailImageId) {
-          return (
-            <ImageDetail
-              key={i + "_d"}
-              detail={image}
-              click={this.toggleImage}
-            />
-          );
-        } else {
-          return (
-            <LazyLoad height="25vmin" once offset={100}>
-              <Image key={i} detail={image} click={this.toggleImage} />{" "}
-            </LazyLoad>
-          );
-        }
+        return (
+          <LazyLoad height="25vmin" once offset={100}>
+            <Image key={i} detail={image} click={this.toggleImage} />{" "}
+          </LazyLoad>
+        );
       });
       return listImages;
     }
