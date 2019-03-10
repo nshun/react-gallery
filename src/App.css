@@ -84,6 +84,11 @@
   background-color: rgba(128, 128, 128, 0.5);
 }
 
+.popup-header {
+  background-color: #777777;
+  color: white;
+}
+
 .detail-image {
   position: absolute;
   left: 50%;
