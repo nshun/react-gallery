@@ -81,12 +81,18 @@
   height: 100%;
   z-index: 9999;
   transition: 0.6s;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(128, 128, 128, 0.9);
 }
 
 .popup-header {
-  background-color: #777777;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  background-color: gray;
+  width: 100%;
   color: white;
+  z-index: 100;
 }
 
 .detail-image {
@@ -95,7 +101,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   height: auto;
-  width: 75vmin;
+  width: 75vw;
   z-index: 2;
   opacity: 1;
 }

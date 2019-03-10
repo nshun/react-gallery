@@ -15,7 +15,6 @@ export default class Image extends Component {
         <div className="popup">
           <div className="popup-header">
             <h1>{detail.title}</h1>
-            <h3>{detail.description}</h3>
           </div>
           <div className="popup-inner">
             <img
