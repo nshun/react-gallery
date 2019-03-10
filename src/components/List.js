@@ -105,7 +105,7 @@ export default class List extends Component {
           );
         } else {
           return (
-            <LazyLoad width="25vmin" height="25vmin" once>
+            <LazyLoad height="25vmin" once offset={100}>
               <Image key={i} detail={image} click={this.toggleImage} />{" "}
             </LazyLoad>
           );
