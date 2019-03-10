@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Helmet from "react-helmet";
 import { TwitterShareButton, TwitterIcon } from "react-share";
 import brokenImage from "../broken-link.svg";
 
@@ -15,20 +14,6 @@ export default class Image extends Component {
     } else {
       return (
         <div className="popup">
-          <Helmet
-            title="Kasane"
-            meta={[
-              { name: "twitter:card", content: detail.title },
-              { name: "twitter:title", content: "Kasane" },
-              { name: "twitter:description", content: detail.description },
-              { name: "twitter:image", content: detail.url },
-              { property: "og:title", content: "Kasane" },
-              { property: "og:type", content: "article" },
-              { property: "og:url", content: window.location.href },
-              { property: "og:image", content: detail.url },
-              { property: "og:description", content: detail.description },
-            ]}
-          />
           <div className="popup-header">
             <h2>{detail.description}</h2>
           </div>
