@@ -15,6 +15,10 @@ export default class Image extends Component {
         title={title || ""}
         src={url || brokenImage}
         onClick={() => this.onClick()}
+        onError={e => {
+          e.target.onerror = "";
+          e.target.src = brokenImage;
+        }}
       />
     );
   }
